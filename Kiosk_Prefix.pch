@@ -1,0 +1,10 @@
+//
+// Prefix header for all source files of the 'Kiosk' target in the 'Kiosk' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#define MF_BUNDLED_BUNDLE(x) [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:(x) ofType:@"bundle"]]
+#define MF_BUNDLED_RESOURCE(x, k, z) [(MF_BUNDLED_BUNDLE(x)) pathForResource:(k) ofType:(z)]
+#endif
